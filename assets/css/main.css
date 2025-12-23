@@ -89,7 +89,7 @@ body {
 
 .scheme__item {
 	width: calc(1/4*100% - (1 - 1/4)*75px);
-	border: 1px solid #fff;
+	border: 3px solid #fff;
 	padding: 20px;
 	display: flex;
 	gap: 15px;
@@ -101,7 +101,7 @@ body {
 .scheme__item:not(:first-child):before {
 	content: '';
 	width: 75px;
-	border-top: 2px dashed #ffffff;
+	border-top: 3px dashed #ffffff;
 	height: 2px;
 	position: absolute;
 	left: -75px;
@@ -153,7 +153,7 @@ body {
 	.scheme__item:nth-child(2):after {
 		content: '';
 		height: 75px;
-		border-left: 2px dashed #ffffff;
+		border-left: 3px dashed #ffffff;
 		width: 2px;
 		position: absolute;
 		left: 50%;
@@ -163,7 +163,8 @@ body {
 }
 
 @media(max-width: 576px) {
-	.scheme__item:before {
+	.scheme__item:before,
+	.scheme__item:after {
 		display: none;
 	}
 	
@@ -220,7 +221,7 @@ body {
 .steps {
 	position: relative;
 	background: #7f2030;
-	padding: 50px 0;
+	padding: 50px 0 65px;
 }
 
 .steps:before {
@@ -257,10 +258,12 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
+	align-self: flex-start;
 }
 
 .steps__list-right .steps__items.img {
 	width: calc(35% - 15px);
+	height: auto;
 }
 
 .steps__list-right .steps__items.noimg {
@@ -313,7 +316,7 @@ body {
 }
 
 .steps__items-content ul li {
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	position: relative;
 	padding-left: 30px;
 }
@@ -329,19 +332,12 @@ body {
 	height: 20px;
 }
 
-.steps__items img {
-	max-width: 450px;
-	width: 100%;
-	height: auto;
-	display: block;
-}
-
 .steps__items-content.img img[align="right"] {
 	float: right;
 	clear: both;
 	margin-left: 15px;
 	margin-bottom: 15px;
-	width: 200px;
+	width: 240px;
 	max-width: 100%;
 	border: 5px solid #302f2f;
 	margin-right: -50px;
@@ -349,11 +345,11 @@ body {
 
 .steps__items.no-border {
 	background: transparent;
-	font-size: 32px;
-	font-weight: bold;
-	color: #fff;
-	text-align: center;
-	line-height: 42px;
+	font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    line-height: 34px;
 }
 
 .delivery {
@@ -362,7 +358,7 @@ body {
 	font-size: 32px;
 	color: #fff;
 	align-items: center;
-	padding-top: 30px;
+	padding-top: 60px;
 }
 
 .delivery img {
@@ -434,6 +430,10 @@ body {
 	
 	.steps__items.img {
 		width: fit-content;
+	}
+	
+	.steps__items-content ul li {
+		margin-bottom: 10px;
 	}
 }
 
